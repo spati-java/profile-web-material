@@ -52,53 +52,17 @@
             </md-list-item>
      </md-tab>
       <md-tab label="Technologies">  
-       
+       <div layout="row"  *ngFor="let tech of data?.technologies">
           <md-list>
               <md-list-item >
-                <h3 mdLine> Java </h3>
+                <h3 mdLine> {{tech}} </h3>
                 <p mdLine>
                   <span> 10 years </span>
                 </p>
               </md-list-item>
-
-              <md-list-item >
-                  <h3 mdLine> Elasticsearch </h3>
-                  <p mdLine>
-                    <span> 2 years </span>
-                  </p>
-                </md-list-item>
-
-                <md-list-item >
-                    <h3 mdLine> SQL </h3>
-                    <p mdLine>
-                      <span> 4 years </span>
-                    </p>
-                  </md-list-item>
-
-                <md-list-item >
-                    <h3 mdLine> Docker </h3>
-                    <p mdLine>
-                      <span> 1 year </span>
-                    </p>
-                  </md-list-item>
-
-                  <md-list-item >
-                      <h3 mdLine> SpringBoot </h3>
-                      <p mdLine>
-                        <span> 2 years </span>
-                      </p>
-                    </md-list-item>
-
-                  <md-list-item >
-                      <h3 mdLine> REST Apis </h3>
-                      <p mdLine>
-                        <span> 2 years </span>
-                      </p>
-                    </md-list-item>
-  
-
-
             </md-list>
+
+       </div>
       </md-tab>
 
       <md-tab label="Education">   
