@@ -1,110 +1,130 @@
 <div>  
 <md-tab-group>
       <md-tab label="Work Experience">
-          <md-list-item class="md-2-line">
-              <div class="md-list-item-text">
-                          <expansion-panels-container>
-                              <expansion-panel>
-                                  <expansion-panel-title>
-                                     Mbo Partners (Edmond , OK)
-                                  </expansion-panel-title>
-                                  <expansion-panel-content>
-                                      We develop apis to serve our business models such as associate payroll , business center , 
-                                      bank account , invoicing , expenses .
-                                  </expansion-panel-content>
-                                </expansion-panel>
-                              </expansion-panels-container>
-                          <expansion-panels-container>
-                              <expansion-panel>
-                                  <expansion-panel-title>
-                                     Goldman Sachs (NY , NY)
-                                  </expansion-panel-title>
-                                  <expansion-panel-content>
-                                     Built web app similar to linked in 
-                                  </expansion-panel-content>
-                                </expansion-panel>
-                              </expansion-panels-container>
 
-                              <expansion-panels-container>
-                                  <expansion-panel>
-                                      <expansion-panel-title>
-                                         AT & T (Seattle , WA)
-                                      </expansion-panel-title>
-                                      <expansion-panel-content>
-                                         Worked on a maintenance project using spring MVC
-                                      </expansion-panel-content>
-                                    </expansion-panel>
-                                  </expansion-panels-container>
-
-                                  <expansion-panels-container>
-                                      <expansion-panel>
-                                          <expansion-panel-title>
-                                            T.T.M.S (Novi , MI)
-                                          </expansion-panel-title>
-                                          <expansion-panel-content>
-                                            Developed web app using spring , hibernate , struts , mysql
-                                          </expansion-panel-content>
-                                        </expansion-panel>
-                                      </expansion-panels-container>
-    
-
-              </div>
-            </md-list-item>
+            <md-list-item dense>
+                <div class="md-list-item-text">
+                      <md-expansion-panel>
+                        <md-expansion-panel-header>
+                          <md-panel-title>
+                            MBO Partners (Edmond , OK)
+                          </md-panel-title>
+                        </md-expansion-panel-header>
+                       At MBO Partners , we develop APIS to serve our business model such as associate payroll managment , invoicing , banking, project managment , profile managment etc.
+                      </md-expansion-panel>
+                      <md-expansion-panel>
+                        <md-expansion-panel-header>
+                          <md-panel-title>
+                            Goldman Sachs (NY , NY)
+                          </md-panel-title>
+                        </md-expansion-panel-header>
+                        Developed web app similar to Linkedin 
+                      </md-expansion-panel>
+                      <md-expansion-panel>
+                        <md-expansion-panel-header>
+                          <md-panel-title>
+                            ATT & T 
+                          </md-panel-title>
+                        </md-expansion-panel-header>
+                        Worked on maintenance project
+                      </md-expansion-panel>
+                </div>
+              </md-list-item>
      </md-tab>
       <md-tab label="Technologies">  
-       <div layout="row"  *ngFor="let tech of data?.technologies">
-          <md-list>
-              <md-list-item >
-                <h3 mdLine> {{tech}} </h3>
-                <p mdLine>
-                  <span> 10 years </span>
-                </p>
-              </md-list-item>
-            </md-list>
 
-       </div>
+<div >
+    <md-card>
+        <md-card-title-group>
+        <md-card-title>Java</md-card-title>
+        <md-card-subtitle>Verson : 1.8</md-card-subtitle>
+        <md-card-content>  10  Years</md-card-content>
+        </md-card-title-group>
+    </md-card>
+  <md-card>
+        <md-card-title-group>
+        <md-card-title>Docker</md-card-title>
+        <md-card-subtitle>1 Year</md-card-subtitle>
+        </md-card-title-group>
+    </md-card>
+    <md-card>
+        <md-card-title-group>
+        <md-card-title>Elasticsearch</md-card-title>
+        <md-card-subtitle>2 Year</md-card-subtitle>
+        </md-card-title-group>
+    </md-card>
+    <md-card>
+        <md-card-title-group>
+        <md-card-title>Spring RESTApi</md-card-title>
+        <md-card-subtitle>2 Year</md-card-subtitle>
+        </md-card-title-group>
+    </md-card>
+
+    <md-card>
+        <md-card-title-group>
+        <md-card-title>AWS </md-card-title>
+        <md-card-subtitle>2 Year</md-card-subtitle>
+        </md-card-title-group>
+    </md-card>
+    <md-card>
+        <md-card-title-group>
+        <md-card-title>Angular</md-card-title>
+        <md-card-subtitle>1 Year</md-card-subtitle>
+        </md-card-title-group>
+    </md-card>
+    <md-card>
+        <md-card-title-group>
+        <md-card-title>Docker</md-card-title>
+        <md-card-subtitle>1 Year</md-card-subtitle>
+        </md-card-title-group>
+    </md-card>
+</div>
+
+       <!--<div layout="row"  *ngFor="let tech of data?.technologies">
+          <ng-container mdColumnDef="position">
+              <md-header-cell *mdHeaderCellDef> No. </md-header-cell>
+              <md-cell *mdCellDef="let element"> {{tech}} </md-cell>
+          </ng-container>
+        
+       </div>-->
       </md-tab>
-
       <md-tab label="Education">   
-          <md-list-item class="md-2-line">
-              <div class="md-list-item-text">
-                    <p>M.S. ( Computer Science) 2012-2014</p>
-                    <p>
-                      <span>
-                        <a href="http://umich.edu/">University of Michigan </a>
-                      </span>
-
-                    </p>
+                <div id = "card-container">
+                  <md-card>
+                      <md-card-title>M.S. ( Computer Science ) 2012-2014</md-card-title>
+                      <md-card-subtitle> <a href="http://umich.edu/">University of Michigan </a></md-card-subtitle>
+                    </md-card>
               </div>
               <div class="md-list-item-text">
-                  <p>B.E. ( Electronics And Telecommunication Engineering) 2001-2005</p>
-                  <p>
-                      <span>
-                      <a href="http://www.bput.ac.in/home.html">Biju Patnaik Univerity of Technology</a>
-                    </span>
-
-                  </p>
-            </div>
-            </md-list-item>
+                  <md-card>
+                    <md-card-title-group>
+                      <md-card-title>B.E. ( Electronics ) 2001-2005</md-card-title>
+                      <md-card-subtitle> <a href="http://www.bput.ac.in/home.html">Biju Patnaik Univerity of Technology</a></md-card-subtitle>
+                    </md-card-title-group> 
+                    </md-card>
+              </div> 
       </md-tab>
 
       <md-tab label="Publications">   
           <md-list-item class="md-2-line">
               <div class="md-list-item-text">
-                    <p>
-                      <span>
-                        <a href="http://www.ingentaconnect.com/content/ben/cseng/2013/00000006/00000001/art00009">Monitoring and Managing Cloud Computing Security using Denial of Service Bandwidth Allowance</a>
-                      </span>
-
-                    </p>
+                    <md-card>
+                        <md-card-subtitle>                         
+                        Monitoring and Managing Cloud Computing Security using Denial of Service Bandwidth Allowance </md-card-subtitle>
+                        <md-action-row>
+                            <a href="http://www.ingentaconnect.com/content/ben/cseng/2013/00000006/00000001/art00009"> 
+                          <button md-fab>Ingenta</button> </a>
+                        </md-action-row>
+                    </md-card>
               </div>
               <div class="md-list-item-text">
-                  <p>
-                      <span>
-                        <a href="http://ieeexplore.ieee.org/abstract/document/7158627/">Intelligent gateway for SCADA system security: A multi-layer attack prevention approach</a>
-                      </span>
-
-                    </p>
+                  <md-card>
+                        <md-card-subtitle>Intelligent gateway for SCADA system security: A multi-layer attack prevention approach</md-card-subtitle>
+                        <md-action-row>
+                            <a href="http://ieeexplore.ieee.org/abstract/document/7158627/">
+                            <button md-fab>IEEE</button></a>
+                          </md-action-row>
+                  </md-card>
             </div>
             </md-list-item>
       </md-tab>

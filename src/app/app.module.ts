@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project/project.component';
 import {HomeService} from './home/home.service';
+import {MdTableModule} from '@angular/material';
+import {FlexLayoutModule} from "@angular/flex-layout";
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,10 @@ import {HomeService} from './home/home.service';
     BrowserAnimationsModule,
     MaterialModule,
     ExpansionPanelsModule,
-    HttpModule
+    HttpModule,
+    MdTableModule,
+    FlexLayoutModule
+    
   ],
   providers: [HomeService],
   bootstrap: [AppComponent]
