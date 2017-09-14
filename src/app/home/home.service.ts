@@ -9,7 +9,7 @@ export class HomeService {
     }
     
     getProfile(){
-      return this.http.get('http://localhost:8081/profile').map((res:Response)=>res.json());
+      return this.http.get('http://35.166.219.25/profile').map((res:Response)=>res.json());
   }
 
 }

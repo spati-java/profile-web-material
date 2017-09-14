@@ -1,95 +1,41 @@
 <div>  
 <md-tab-group>
       <md-tab label="Work Experience">
-          <md-list-item>
+          <md-list-item *ngFor="let company of data?.companies"> 
               <md-expansion-panel>
                   <md-expansion-panel-header>
                     <md-panel-title>
-                      MBO Partners (Edmond , OK)
+                            {{company.name}}, ({{company.address.city}} ,{{company.address.state}}) 
                     </md-panel-title>
                   </md-expansion-panel-header>
-                  <md-panel-description>
-                      Enviornment :  Java , SpringBoot , Docker , Elasticsearch , MongoDB , Domain Driven Design ,Mules ESB , AWS
-                     </md-panel-description>
-                   <p>At MBO Parteners we develop API to serve our business model such as associate payroll managment 
-                       Invoice Managment , Profile Management  etc.
-                   </p> 
+
+                            <div *ngFor="let proj of company.projects "> 
+                                    <md-panel-description>
+                                            Enviornment : {{proj.environment }}
+                                    </md-panel-description>
+                                    <span>
+                                            <h4>Project Description</h4> 
+                                    </span>
+                                    <p>
+                                            {{proj.description}}
+                                    </p> 
+
+                            </div> 
                 </md-expansion-panel>
-          </md-list-item>
-          <md-list-item>
-              <md-expansion-panel>
-                  <md-expansion-panel-header>
-                    <md-panel-title>
-                      Goldman Sachs (NY , NY)
-                    </md-panel-title>
-                  </md-expansion-panel-header>
-                  Developed web app similar to Linkedin 
-                </md-expansion-panel>
-          </md-list-item>
-            <md-list-item>
-                      <md-expansion-panel>
-                        <md-expansion-panel-header>
-                          <md-panel-title>
-                            ATT & T 
-                          </md-panel-title>
-                        </md-expansion-panel-header>
-                        Worked on maintenance project
-                      </md-expansion-panel>
-              </md-list-item>
-              
-              
+          </md-list-item>  
      </md-tab>
       <md-tab label="Technologies">  
 
-<div >
-    <md-card>
-        <md-card-title-group>
-        <md-card-title > Java</md-card-title>
-        <md-card-subtitle>Verson : 1.8</md-card-subtitle>
-        <md-card-content> <font color="#FF3F80"> 10  Years</font></md-card-content>
-        </md-card-title-group>
-    </md-card>
-  <md-card>
-        <md-card-title-group>
-        <md-card-title>Docker</md-card-title>
-        <md-card-subtitle>1 Year</md-card-subtitle>
-        </md-card-title-group>
-    </md-card>
-    <md-card>
-        <md-card-title-group>
-        <md-card-title>Elasticsearch</md-card-title>
-        <md-card-subtitle>2 Year</md-card-subtitle>
-        </md-card-title-group>
-    </md-card>
-    <md-card>
-        <md-card-title-group>
-        <md-card-title>Spring RESTApi</md-card-title>
-        <md-card-subtitle>2 Year</md-card-subtitle>
-        </md-card-title-group>
-    </md-card>
-
-    <md-card>
-        <md-card-title-group>
-        <md-card-title>AWS </md-card-title>
-        <md-card-subtitle>2 Year</md-card-subtitle>
-        </md-card-title-group>
-    </md-card>
-    <md-card>
-        <md-card-title-group>
-        <md-card-title>Angular</md-card-title>
-        <md-card-subtitle>1 Year</md-card-subtitle>
-        </md-card-title-group>
-    </md-card>
+<div *ngFor="let tech of data?.technologies">
+        <md-card>
+                <md-card-title-group>
+                <md-card-title >{{tech.name}} </md-card-title>
+                <md-card-subtitle>Version : {{tech.version}}</md-card-subtitle>
+                <md-card-content> <font color="#FF3F80"> {{tech.yearsOfExp}} Years</font></md-card-content>
+                </md-card-title-group>
+            </md-card> 
 </div>
-
-       <!--<div layout="row"  *ngFor="let tech of data?.technologies">
-          <ng-container mdColumnDef="position">
-              <md-header-cell *mdHeaderCellDef> No. </md-header-cell>
-              <md-cell *mdCellDef="let element"> {{tech}} </md-cell>
-          </ng-container>
-        
-       </div>-->
-      </md-tab>
+  </md-tab>
       <md-tab label="Education">   
                 <div id = "card-container">
                   <md-card>
@@ -107,7 +53,7 @@
               </div> 
       </md-tab>
 
-      <md-tab label="Publications">   
+      <md-tab label="Publication">   
           <md-list-item class="md-2-line">
               <div class="md-list-item-text">
                     <md-card>
