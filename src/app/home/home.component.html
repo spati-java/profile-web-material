@@ -1,46 +1,50 @@
-<div>  
-<md-tab-group>
+<div> 
+
+   <md-tab-group>
       <md-tab label="Work Experience">
-          <md-list-item *ngFor="let company of data?.companies"> 
-              <md-expansion-panel>
-                  <md-expansion-panel-header>
-                    <md-panel-title>
-                            {{company.name}}, ({{company.address.city}} ,{{company.address.state}}) 
-                    </md-panel-title>
-                  </md-expansion-panel-header>
 
-                            <div *ngFor="let proj of company.projects "> 
-                                    <md-panel-description>
-                                            Enviornment : {{proj.environment }}
-                                    </md-panel-description>
-                                    <span>
-                                            <h4>Project Description</h4> 
-                                    </span>
-                                    <p>
-                                            {{proj.description}}
-                                    </p> 
+            <md-accordion multi="true" *ngFor="let company of data?.companies">
+                    <md-expansion-panel>
+                            <md-expansion-panel-header>
+                              <md-panel-title>
+                                      {{company.name}}, ({{company.address.city}} ,{{company.address.state}}) 
+                              </md-panel-title>
+                            </md-expansion-panel-header>
+                                <div *ngFor="let proj of company.projects "> 
+                                        <md-panel-description>
+                                                 Enviornment : {{proj.environment }}
+                                        </md-panel-description>
+                                                <span>
+                                                      <h6>Project Description</h6> 
+                                                </span>
+                                              <p>
+                                                      {{proj.description}}
+                                              </p> 
+                                      </div> 
+                          </md-expansion-panel>
+            </md-accordion>
 
-                            </div> 
-                </md-expansion-panel>
+          <md-list-item > 
+              
           </md-list-item>  
      </md-tab>
       <md-tab label="Technologies">  
 
-<div *ngFor="let tech of data?.technologies">
+<div *ngFor="let tech of data?.technologies" >
         <md-card>
                 <md-card-title-group>
                 <md-card-title >{{tech.name}} </md-card-title>
                 <md-card-subtitle>Version : {{tech.version}}</md-card-subtitle>
                 <md-card-content> <font color="#FF3F80"> {{tech.yearsOfExp}} Years</font></md-card-content>
                 </md-card-title-group>
-            </md-card> 
+        </md-card> 
 </div>
   </md-tab>
       <md-tab label="Education">   
                 <div id = "card-container">
                   <md-card>
                       <md-card-title> <font size="4">M.S. ( Computer Science ) 2012-2014 </font></md-card-title>
-                      <md-card-subtitle> <a href="http://umich.edu/">University of Michigan </a></md-card-subtitle>
+                      <md-card-subtitle color="primary"> <a href="http://umich.edu/">University of Michigan </a></md-card-subtitle>
                     </md-card>
               </div>
               <div class="md-list-item-text">
