@@ -1,2 +1,2 @@
-Angular4 app dockerzed deployed in AWS 
+Dockerized Angular4 app deployed in AWS 
 
